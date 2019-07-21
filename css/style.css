@@ -44,17 +44,163 @@ body {
 
 .header {
   height: 7rem;
+  font-size: 1.4rem;
   background-color: #fff;
-  border-bottom: var(--color-grey-light-2); }
+  border-bottom: var(--color-grey-light-2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
 
 .content {
   display: flex; }
 
-.sidenav {
+.sidebar {
   background-color: var(--color-grey-dark-1);
-  flex: 0 0 18%; }
+  flex: 0 0 18%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
 
 .hotel-view {
   background-color: #fff;
   background-color: orangered;
-  flex: 1; }
+  flex: 1;
+  height: 80vh; }
+
+.logo {
+  height: 3.25rem;
+  margin-left: 2rem; }
+
+.search {
+  flex: 0 0 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .search__input {
+    font-family: inherit;
+    color: inherit;
+    font-size: inherit;
+    border: none;
+    padding: 0.7rem 2rem;
+    border-radius: 100px;
+    outline: none;
+    background-color: var(--color-grey-light-2);
+    width: 90%;
+    margin-right: -3.5rem;
+    transition: all 0.2s; }
+    .search__input:focus {
+      width: 100%; }
+    .search__input::-webkit-input-placeholder {
+      /* Chrome/Opera/Safari */
+      color: var(--color-grey-light-4);
+      font-weight: 100; }
+    .search__input::-moz-placeholder {
+      /* Firefox 19+ */
+      color: var(--color-grey-light-4);
+      font-weight: 100; }
+    .search__input:-ms-input-placeholder {
+      /* IE 10+ */
+      color: var(--color-grey-light-4);
+      font-weight: 100; }
+    .search__input:-moz-placeholder {
+      /* Firefox 18- */
+      color: var(--color-grey-light-4);
+      font-weight: 100; }
+  .search__input:focus + .search__button {
+    background-color: var(--color-grey-light-3); }
+  .search__button {
+    border: none;
+    background-color: var(--color-grey-light-3); }
+    .search__button:focus {
+      outline: none; }
+    .search__button:active {
+      transform: translateY(2px); }
+  .search__icon {
+    width: 2rem;
+    height: 2rem;
+    fill: var(--color-grey-dark-2); }
+
+.user-nav {
+  align-self: stretch;
+  display: flex;
+  align-items: center; }
+  .user-nav > * {
+    padding: 2rem;
+    cursor: pointer;
+    height: 100%;
+    display: flex;
+    align-items: center; }
+  .user-nav > *:hover {
+    background-color: var(--color-grey-light-2); }
+  .user-nav__icon-box {
+    position: relative; }
+  .user-nav__icon {
+    width: 2.25rem;
+    height: 2.25rem;
+    fill: var(--color-grey-dark-2); }
+  .user-nav__notification {
+    font-size: 0.8rem;
+    width: 1.75rem;
+    height: 1.75rem;
+    color: #fff;
+    background-color: var(--color-primary);
+    border-radius: 50%;
+    position: absolute;
+    top: 1.5rem;
+    right: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  .user-nav__user {
+    display: flex;
+    align-items: center; }
+  .user-nav__photo {
+    height: 3.75rem;
+    border-radius: 50%;
+    margin-right: 2rem; }
+
+.side-nav {
+  font-size: 1.4rem;
+  margin-top: 3.5rem;
+  list-style: none; }
+  .side-nav__item {
+    position: relative;
+    transition: all 0.4s; }
+    .side-nav__item:not(:last-child) {
+      margin-bottom: 0.5rem; }
+  .side-nav__item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 3px;
+    background-color: var(--color-primary);
+    transition: transform 0.3s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s;
+    transform: scaleY(0); }
+  .side-nav__item:hover::before, .side-nav__item--active::before {
+    transform: scaleY(1);
+    width: 100%; }
+  .side-nav__item:active::before {
+    background-color: var(--color-primary-light); }
+  .side-nav__link:link, .side-nav__link:visited {
+    color: var(--color-grey-light-1);
+    text-decoration: none;
+    text-transform: uppercase;
+    display: block;
+    padding: 1.5rem 3rem;
+    position: relative;
+    z-index: 10;
+    display: flex;
+    align-items: center; }
+  .side-nav__icon {
+    width: 1.75rem;
+    height: 1.75rem;
+    margin-right: 2rem;
+    fill: currentColor; }
+
+.legal {
+  font-size: 1.4rem;
+  text-align: center;
+  color: var(--color-grey-light-4);
+  padding: 2.5rem; }

@@ -46,7 +46,7 @@ body {
   height: 7rem;
   font-size: 1.4rem;
   background-color: #fff;
-  border-bottom: var(--color-grey-light-2);
+  border-bottom: 1px solid var(--color-grey-light-2);
   display: flex;
   justify-content: space-between;
   align-items: center; }
@@ -63,7 +63,6 @@ body {
 
 .hotel-view {
   background-color: #fff;
-  background-color: orangered;
   flex: 1;
   height: 80vh; }
 
@@ -157,7 +156,7 @@ body {
   .user-nav__photo {
     height: 3.75rem;
     border-radius: 50%;
-    margin-right: 2rem; }
+    margin-right: 1rem; }
 
 .side-nav {
   font-size: 1.4rem;
@@ -204,3 +203,76 @@ body {
   text-align: center;
   color: var(--color-grey-light-4);
   padding: 2.5rem; }
+
+.galery {
+  display: flex; }
+  .galery__photo {
+    width: 100%;
+    height: 100%; }
+
+.overview {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--color-grey-light-2); }
+  .overview__heading {
+    font-size: 2.5rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 1.5rem 3rem; }
+  .overview__stars {
+    margin-right: auto;
+    display: flex; }
+  .overview__icon-star, .overview__icon-location {
+    width: 1.75rem;
+    height: 1.75rem;
+    fill: var(--color-primary); }
+  .overview__location {
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center; }
+  .overview__icon-location {
+    margin-right: 0.5rem; }
+  .overview__rating {
+    background-color: var(--color-primary);
+    color: #fff;
+    margin-left: 3rem;
+    align-self: stretch;
+    padding: 0 2.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .overview__rating-average {
+      font-size: 2.5rem;
+      font-weight: 300;
+      padding-top: 0.8rem; }
+    .overview__rating-count {
+      font-size: 0.7rem;
+      text-transform: uppercase; }
+
+.btn-inline {
+  border: none;
+  color: var(--color-primary);
+  border-bottom: 1px solid currentColor;
+  background-color: transparent;
+  font-size: inherit;
+  cursor: pointer;
+  display: inline-block;
+  padding-bottom: 2px;
+  transition: all 0.3s; }
+  .btn-inline:hover {
+    color: var(--color-grey-dark-1); }
+  .btn-inline:focus {
+    outline: none;
+    animation: pulsate 0.8s infinite; }
+
+@keyframes pulsate {
+  0% {
+    transform: scale(1);
+    box-shadow: none; }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.25); }
+  100% {
+    transform: scale(1);
+    box-shadow: none; } }

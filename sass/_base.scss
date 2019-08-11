@@ -19,14 +19,25 @@
   --line: 1px solid var(--color-grey-light-2);
 }
 
+//SASS VARIABLES
+$bp-largest: 75em; // 1200px / 16 = 75
+$bp-large: 68.75em; // 1100px / 16 = 68.75
+$bp-medium: 56.25em; // 900px / 16 = 56.25
+$bp-small: 37.5em; // 600 / 16 = 37.5
+$bp-smallest: 31.25em; // 500 / 16 = 31.25
+
 * {
   margin: 0;
   padding: 0;
 }
 
 html {
-  font-size: 62.5%;
+  font-size: 62.5%; // 1rem = 10px; (10 / 16) * 100 == 62.5%;
   box-sizing: border-box;
+
+  @media only screen and(max-width: $bp-large) {
+    font-size: 50%; // 1rem = 8px; (8 / 16) * 100 = 50%
+  }
 }
 
 *,
